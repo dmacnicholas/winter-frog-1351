@@ -1,0 +1,4 @@
+<h3><%= @garden.name %></h3>
+<% @garden.harvest_below_one_hundred.each do |plant| %>
+  <p><%= plant.name %></p>
+<% end %>

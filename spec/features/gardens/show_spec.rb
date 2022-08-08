@@ -13,18 +13,16 @@ RSpec.describe "Gardens Show Page" do
     plant_3 = Plant.create!(name: 'Cucumber', description: 'Delicious', days_to_harvest: 43)
     plant_4 = Plant.create!(name: 'Carrot', description: 'Orange', days_to_harvest: 53)
     plant_5 = Plant.create!(name: 'Peppers', description: 'Spicy', days_to_harvest: 153)
-    plant_6 = Plant.create!(name: 'Cucumber', description: 'Delicious', days_to_harvest: 43)
-    plant_7 = Plant.create!(name: 'Tomato', description: 'Juicy', days_to_harvest: 23)
-    plant_8 = Plant.create!(name: 'Basil', description: 'Green', days_to_harvest: 143)
+    plant_6 = Plant.create!(name: 'Basil', description: 'Green', days_to_harvest: 143)
 
     plot_plant_1 = PlotPlant.create!(plot_id: plot_1.id, plant_id: plant_1.id )
     plot_plant_2 = PlotPlant.create!(plot_id: plot_2.id, plant_id: plant_2.id )
-    plot_plant_3 = PlotPlant.create!(plot_id: plot_3.id, plant_id: plant_3.id )
+    plot_plant_3 = PlotPlant.create!(plot_id: plot_2.id, plant_id: plant_3.id )
     plot_plant_4 = PlotPlant.create!(plot_id: plot_3.id, plant_id: plant_4.id )
     plot_plant_5 = PlotPlant.create!(plot_id: plot_3.id, plant_id: plant_5.id )
     plot_plant_6 = PlotPlant.create!(plot_id: plot_3.id, plant_id: plant_6.id )
-    plot_plant_7 = PlotPlant.create!(plot_id: plot_3.id, plant_id: plant_7.id )
-    plot_plant_8 = PlotPlant.create!(plot_id: plot_3.id, plant_id: plant_8.id )
+    plot_plant_7 = PlotPlant.create!(plot_id: plot_3.id, plant_id: plant_1.id )
+    plot_plant_8 = PlotPlant.create!(plot_id: plot_3.id, plant_id: plant_3.id )
 
     visit "/gardens/#{turing_garden.id}"
 

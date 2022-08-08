@@ -69,4 +69,5 @@ RSpec.describe "Plots Index Page" do
    within "#plot-#{plot_1.id}" do
      expect(page).to_not have_content('Tomato')
    end
+ end
 end
